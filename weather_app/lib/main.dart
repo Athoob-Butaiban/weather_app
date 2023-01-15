@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:weather_app/pages/home_page.dart';
-import 'package:weather_app/pages/weather_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         //appBarTheme: Colors.black,
-        primaryColor: Colors.red,
+        primaryColor: Colors.blue,
       ),
       routerConfig: router, // to use the router
     );
@@ -33,8 +32,4 @@ final router = GoRouter(routes: [
     builder: (context, state) =>
         HomePage(), // pass the calls name as constructor
   ),
-  GoRoute(
-    path: "/weather",
-    builder: (context, state) => WeatherPage(),
-  )
 ]);
